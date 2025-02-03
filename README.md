@@ -16,6 +16,25 @@ Funkcja sprawdz_polozenie_punktu(a, b, punkt) oblicza, czy dany punkt
 2. Jeśli 𝑌 𝑝𝑢𝑛𝑘𝑡𝑢 == 𝑌𝑝𝑟𝑜𝑠𝑡𝑒𝑗 → punkt leży na prostej.
 3. Jeśli 𝑌 𝑝𝑢𝑛𝑘𝑡𝑢 < 𝑌𝑝𝑟𝑜𝑠𝑡𝑒𝑗 → punkt jest poniżej prostej.
 
+## Kod:
+```python
+def sprawdz_polozenie_punktu(a, b, punkt):
+    Xpunktu, Ypunktu = punkt
+    Yprostej = a * Xpunktu + b
+    if Ypunktu > Yprostej:
+        print("Wyznaczony punkt jest powyżej prostej")
+    elif Ypunktu == Yprostej:
+        print("Wyznaczony punkt jest na prostej")
+    else:
+        print("Wyznaczony punkt jest poniżej prostej")
+
+a = float(input("Podaj parametr a: "))
+b = float(input("Podaj parametr b: "))
+Xp = float(input("Podaj współrzędną x punktu: "))
+Yp = float(input("Podaj współrzędną y punktu: "))
+sprawdz_polozenie_punktu(a, b, (Xp,Xp))
+```
+
 ### Uruchomienie:
     python skrypt1.py
 
@@ -38,6 +57,32 @@ Funkcja sprawdz_czy_punkt_na_odcinku(A, B, punkt) sprawdza, czy punkt (𝑋,𝑌
 **y=ax+b**
 
 3. Sprawdzenie, czy punkt spełnia to równanie.
+
+## Kod:
+```python
+def sprawdz_czy_punkt_na_odcinku(A, B, punkt):
+    Xa, Ya = A
+    Xb, Yb = B
+    Xpunkt, Ypunkt = punkt
+    if (Xa <= Xpunkt <= Xb):
+        a = (Yb - Ya)/(Xb - Xa)
+        b = Ya - a * Xa
+        Yprostej = a * Xpunkt + b
+        if Yprostej == Ypunkt:
+            print("Punkt znajduje się na odcinku")
+        else:
+            print("Punkt nie znajduje się na odcinku")
+    else:
+        print("NIE znajduje się w przedziale")
+
+Xa = float(input("Podaj współrzędną x począku odcinka: "))
+Ya = float(input("Podaj współrzędną y począku odcinka: "))
+Xb = float(input("Podaj współrzędną x końca odcinka: "))
+Yb = float(input("Podaj współrzędną Y końca odcinka: "))
+x = float(input("Podaj współrzędną x sprawdzanego punktu: "))
+y = float(input("Podaj współrzędną y sprawdzanego punktu: "))
+sprawdz_czy_punkt_na_odcinku((Xa,Ya), (Xb,Yb), (x,y))
+```
 
 ### Uruchomienie:
     python skrypt2.py
