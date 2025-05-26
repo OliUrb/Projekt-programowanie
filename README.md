@@ -33,8 +33,23 @@ a = float(input("Podaj parametr a: "))
 b = float(input("Podaj parametr b: "))
 Xp = float(input("Podaj współrzędną x punktu: "))
 Yp = float(input("Podaj współrzędną y punktu: "))
-sprawdz_polozenie_punktu(a, b, (Xp,Xp))
+sprawdz_polozenie_punktu(a, b, (Xp,Yp))
 ```
+
+# Przykład działania
+## Przykład 1 – Położenie punktu względem prostej
+### Dane wejściowe:
+```python
+Podaj parametr a: 2
+Podaj parametr b: 3
+Podaj współrzędną x punktu: 4
+Podaj współrzędną y punktu: 10
+```
+### Wynik:
+```python
+Wyznaczony punkt jest powyżej prostej
+```
+
 
 # Przynależność punktu do odcinka
 Funkcja sprawdz_czy_punkt_na_odcinku(A, B, punkt) sprawdza, czy punkt (𝑋,𝑌) znajduje się na odcinku pomiędzy punktami 𝐴(𝑋𝑎,𝑌𝑎) i B(Xb,Yb).
@@ -73,29 +88,7 @@ y = float(input("Podaj współrzędną y sprawdzanego punktu: "))
 sprawdz_czy_punkt_na_odcinku((Xa,Ya), (Xb,Yb), (x,y))
 ```
 
-# Instrukcja uruchomienia
-1. Pobierz pliki projektu.
-2. Upewnij się, że masz zainstalowanego Pythona 3.x.
-3. Uruchom skrypt w terminalu:
-```python
-python skrypt1.py
-python skrypt2.py
-```
 4. Wprowadź wartości podane w instrukcjach.
-
-# Przykłady działania
-## Przykład 1 – Położenie punktu względem prostej
-### Dane wejściowe:
-```python
-Podaj parametr a: 2
-Podaj parametr b: 3
-Podaj współrzędną x punktu: 4
-Podaj współrzędną y punktu: 10
-```
-### Wynik:
-```python
-Wyznaczony punkt jest powyżej prostej
-```
 
 ## Przykład 2 – Sprawdzenie przynależności punktu do odcinka
 ### Dane wejściowe:
@@ -112,6 +105,7 @@ Podaj współrzędną y sprawdzanego punktu: 4
 ```python
 Punkt znajduje się na odcinku
 ```
+
 
 # Zadania:
 ## Zadanie 1: Położenie punktu względem prostej
